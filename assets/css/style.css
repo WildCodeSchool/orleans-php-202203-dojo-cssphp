@@ -1,0 +1,67 @@
+@import 'theme.css';
+
+* {
+    font-family: var(--font);
+}
+
+div {
+    display    : flex;
+    align-items: center;
+}
+
+.cards {
+    justify-content: space-between;
+    flex-wrap      : wrap;
+}
+
+figure {
+    display   : flex;
+    box-shadow: 2px 2px 8px -2px grey;
+    max-width : 700px;
+}
+
+img {
+    max-width : 300px;
+    min-height: 350px;
+    object-fit: cover;
+}
+
+figcaption {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+    padding        : var(--spacing);
+}
+
+p,
+div {
+    color: var(--intermediate);
+}
+
+p {
+    flex: 1;
+}
+
+h1 {
+    margin-inline-start: var(--spacing2);
+}
+
+svg {
+    margin-inline-end: var(--spacing);
+}
+
+@media screen and (max-width: 700px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    img {
+        max-height: 200px;
+        min-height: 100px;
+        max-width : 100%;
+    }
+
+    figure {
+        flex-direction: column;
+    }
+}
